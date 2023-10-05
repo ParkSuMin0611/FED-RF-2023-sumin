@@ -1,0 +1,496 @@
+@charset "utf-8";
+/* 서브페이지용 CSS - sub.css */
+
+/* 공통외부 CSS 합치기 */
+@import url(./common.css);
+
+/* 서브페이지 공통 글자설정 */
+/* #cont{
+    font-family: '나눔고딕', sans-serif;
+} */
+
+/* 서브타이틀 */
+h2.stit{
+    color: rgb(63, 233, 224);
+    font-size: 30px;
+    font-weight: normal;
+    font-family: 'Bagel Fat One', cursive;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+
+    /* outline: 1px solid lightblue; */
+    /* 
+        [ outline 요소 ]
+        box 모델의 필수 속성은 아니지만 박스의 외곽선을 표현해주며 박스 자체의 크기에 영향을 주지 않음.
+        outline: 두께 종류 색상
+        -> border와 셋팅이 같음!
+        단, border-radius 둥근모서리는 보더만 적용되었으나 이제 아웃트라인도 됨.
+    */
+    padding: 50px;
+    /* 배경넣기: 한 번에 쓰기*/
+    /* background: url(../images/afig4-1.jpg) no-repeat center/cover; */
+    /* background: 색이반고윙/크;
+        -> 배경색 이미지 반복 고정 위치/크기 */
+    /* 배경넣기: 속성별 쓰기 */
+    /* 반복여부 */
+    background-repeat: no-repeat;
+    /* 배경위치: 가로 세로 */
+    background-position: center;
+    /* 배경크기: 가로 세로 (cover-박스 채우기) */
+    background-size: cover;
+    /* 박스 그림자 */
+    box-shadow: inset 0 0 6px 5px darkgray;
+    /* 
+        [ box-shadow 속성 ]
+        -박스 외부/내부 그림자 설정속성
+        -값: x축 y축 blur spread 색
+        text-shadow와 달리 spread 속성이 있음
+        이것은 그림자를 커지게 함!
+        -내부그림자 옵션: inset
+        -그림자 다중설정: 콤마로 연속사용 가능
+    */
+}
+
+h2.st1{
+    background-image: url(../images/background1.jpg);
+    background-position-y: -190px;
+}
+
+h2.st2{
+    background-image: url(../images/background2.jpg);
+    background-position-y: -150px;
+}
+
+h2.st3{
+    background-image: url(../images/background3.jpg);
+    background-position-y: -150px;
+}
+
+ /* IT/과학 배경 이미지 */
+h2.st4{
+    /* 배경이미지  */
+    background-image: url(../images/background4.jpg);
+    background-position-y: -150px;
+}
+
+h2.st5{
+    background-image: url(../images/background5.jpg);
+    /* 배경위치변경 (세로 y축) */
+    background-position-y: -90px;
+}
+
+/* 언론사 로고 */
+.prlogo img{
+    height: 32px;
+    /* 
+        이미지는 기본 비율을 가지고 있어서 가로, 세로 중 한쪽만 크기를 주면 나머지 방향은 자동으로 비율 유지
+        단, 가로와 세로를 다 주면 비율이 깨짐
+    */
+}
+
+/* 기사 타이틀 */
+.atit{
+    font-size: 30px;
+    margin: 20px auto;
+}
+
+.afigimg{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.afigimg img{
+    width: 100%;
+}
+.acont p{
+    font-size: 17px;
+    color: black;
+    /* 자간: ls */
+    letter-spacing: 2px;
+    /* 단어간격: ws */
+    word-spacing: 1px;
+    /* 양쪽 정렬 */
+    text-align: justify;
+    /* 줄간격 lh */
+    line-height: 1.5;
+    /*
+    글자 라인간 간격 조정
+    숫자만 쓰면 배수임(글자 높이값에 대한 배수)
+    단위를 쓰면 단위에 맞게 줄간격 조정 
+     -> 줄간격의 응용은 버튼 등의 글자를 세로 중앙에 오게 할 때 박스 높이값만큼 준다.
+    */
+}
+/* mark요소 디자인 변경하기 */
+.acont p mark {
+    display: block;
+    background-color: rgba(0, 100, 0, 0.103);
+    text-align: center;
+    margin: 15px 0;
+    padding: 20px 50px;
+    font-size: 25px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    color: green;
+    font-family: 'Bagel Fat One', cursive;
+    font-weight: lighter;
+}
+
+/* 유튜브 동영상 박스 */
+.mvbx{
+    height: 550px;
+    /* 
+        div와 같은 block요소는 width 설정을 하지 않으면 width:auto로 자동 설정됨.
+        이는 싸고 있는 박스 컨텐트 영역을 자동으로 채워준다!
+    */
+}
+.mvbx iframe{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.rpt{
+    background-color: rgba(0, 139, 139, 0.11);
+    padding: 10px 20px;
+    display: inline-block;
+    box-shadow: inset 0 0 1px darkgreen;
+    margin: 0;
+}
+
+/* 인용블록영역 */
+.bqbx{
+    padding: 20px 0;
+    margin: 20px 0;
+    border-top: 2px dashed darkolivegreen;
+    border-bottom: 2px dashed darkolivegreen;
+}
+
+.bqbx blockquote{
+    padding: 15px 0;
+    line-height: 2;
+}
+
+/* 인용블록 이미지 */
+.bqbx img{
+    float: right;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* article 제목 공통 - .atbx */
+.atbx h5{
+    /* 배경색 */
+    background-color: rgba(0, 100, 0, 0.103);
+    /* 패딩 */
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px darkgreen;
+    font-size: 20px;
+    color: darkgreen;
+    margin: 0;
+}
+
+/* 주해박스 */
+.desc{
+    border-top: 2px dashed darkolivegreen;
+    border-bottom: 2px dashed darkolivegreen;
+    padding: 20px 0;
+    font-size: 15px;
+    line-height: 2;
+}
+.desc div{
+    padding: 15px 0;
+}
+
+/* 기사원문 */
+.realnews{
+    text-align: right;
+}
+.realnews a{
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    border: 1px solid darkcyan;
+    /* border-radius: 50%; 원형 */
+    /* 줄간격으로 세로 글자 중앙- 높이값과 같음 */
+    line-height: 50px;
+    /* 가로 정렬 중앙 */
+    text-align: center;
+    font-size: 16px;
+    /* a요소 기본 글자색 변경, 밑줄 없앰 */
+    color: darkcyan;
+    background-color: white;
+    text-decoration: none;
+
+}
+/* 마우스 오버시 변경 */
+.realnews a:hover{
+    color: white;
+    background-color: darkcyan;
+}
+
+/* 뉴스 파트 공통 class */
+.nbx{
+    border-top: 2px dashed darkcyan;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+/* 뉴스 파트 공통 a요소 */
+.nbx a{
+    /* 글자크기 fz */
+    font-size: 17px;
+    /* 줄간격 lh */
+    line-height: 2.5;
+    /* 글자색 c */
+    color: #222;
+    /* 밑줄없앰 */
+    text-decoration: none;
+}
+
+/* 공통 a마우스 오버시 */
+.nbx a:hover{
+    color: lightblue;
+    text-shadow: 1px 1px 1px darkgreen;
+}
+
+/* 뉴스 타이틀 공통 */
+.nbx h3{
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    background-image: linear-gradient(to right, lightblue, transparent);
+    padding: 7px;
+}
+
+/* 한 줄 말줄임 표시하기 공통처리 */
+.nbx li, .nbx dd{
+    /* 1. 줄바꿈 방지 wh */
+    white-space: nowrap;
+    /* 2. 넘치는 컨텐츠 숨기기 oh */
+    overflow: hidden;
+    /* 3. 넘치는 글자 말줄임 표시 tv */
+    text-overflow: ellipsis;
+    /* 
+        추가) 여러 줄일 때 말줄임
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 라인수; 
+        -webkit-box-orient: vertical;
+
+        단, 박스 높이값을 글자가 보일만큼 조절함
+        -> white-space:nowrap; 없음
+    */
+}
+
+/* 주요뉴스 ul */
+.cnews ul li::before{
+    content: '🍕';
+}
+/* 
+    [ CSS 가상요소: before, after ]
+    -모든 요소는 맨앞과 맨뒤에 가상요소를 사용할 수 있다.
+    -맨앞: before, 맨뒤: after
+    -필수속성: content
+    -이미지는 url() 사용
+*/
+
+/* 주요뉴스 li별 글자색 바꾸기 */
+.cnews li:first-child a{
+    color: red;
+}
+.cnews li:nth-child(2) a{
+    color: blue;
+}
+.cnews li:last-child a{
+    color: yellowgreen;
+}
+
+/* 분야별 뉴스 */
+.snews dt{
+    font-family: 'Sunflower', sans-serif;
+    font-size: 20px;
+    background-color: lightcyan;
+    display: inline-block;
+    padding: 15px;
+    border: 2px dotted darkcyan;
+    margin-top: 10px;
+}
+
+/* dd 앞에 가상요소로 블릿넣기 */
+.snews dd::before{
+    content: '🍔';
+}
+
+/* 분야별 뉴스 dt별 글자색, 배경색변경하기 */
+.snews dt:first-of-type{
+    color: red;
+    background-color: lightgoldenrodyellow;
+}
+.snews dt:nth-of-type(2){
+    color: blue;
+    background-color: lightgoldenrodyellow;
+}
+.snews dt:last-of-type{
+    color: yellowgreen;
+    background-color: lightgoldenrodyellow;
+}
+
+/* 
+    [ 자식요소 선택 가상클래스 : 자식요소 종류가 같아야함! ]
+    요소:first-child -> 첫번째 자식요소
+    요소:nth-child(n) -> n번째 자식요소
+    요소:last-child -> 마지막째 자식요소
+    
+    [ 여러종류가 섞여 있을 경우 형제 선택하기 ]
+    요소:first-of-type -> 같은 요소 중 첫번째
+    요소:nth-of-type(n) -> 같은 요소 중 n번째
+    요소:last-of-type -> 같은 요소 중 마지막째
+
+    단, n은 1부터
+*/
+
+/* 오늘의 작품 & 느낌 */
+.work{
+    text-align: center;
+    /* 배경색 */
+    /* background-color: darkseagreen; */
+
+    /* 그라데이션 -> 이미지로! bgi */
+    /* 
+        background-image:
+        linear-gradient(방향, 색1, 색2);
+        linear-gradient(방향, 색1 몇%, 색2 몇%);
+        linear-gradient(각도, 색1 몇%, 색2 몇%);
+        -옵션
+            1. 방향: to top, to bottom, to left, to right
+            2. 각도: deg
+    */ 
+    background-image: linear-gradient(45deg, seagreen, lightseagreen, lightblue);
+
+    border: 20px dashed green;
+    padding: 20px;
+    margin: 10px;
+
+    /* 
+        배경옵션 추가!
+        background-clip: 배경이 적용되는 범위 설정
+        1. border-box: 보더까지 적용(기본값)
+        2. padding-box: 패딩까지 적용
+        3. content-box: 내용영역만 적용(패
+    */
+    background-clip: content-box;
+}
+
+.work h3{
+    margin: 10px;
+    font-family: 'Dongle', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+.work img{
+    border: 15px ridge gold;
+    /* ridge: 액자틀 모양 */
+}
+/* 작품명 */
+.work figcaption{
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    padding: 5px;
+}
+
+/* 사진 뉴스 박스 */
+/* 타이틀 */
+.pnews h3{
+    /* 배경 그라데이션 없앰 */
+    background-image: none;
+    /* 중앙 정렬 */
+    text-align: center;
+}
+
+/* 가상요소 사진기 아이콘 넣기 */
+.pnews h3::before{
+    content: '📷';
+    font-size: 35px;
+}
+.pnews h3::after{
+    content: '📷';
+    font-size: 35px;
+}
+
+/* 사진 뉴스 테이블 */
+.pnews table{
+    /* 최대 가로크기 지정 maw */
+    max-width: 500px;
+
+    /* 테이블은 기본적으로 내용만큼 가로크기를 가지며 부모박스의 크기가 작아질 경우 그 크기에 맞춰진다! */
+
+    /* 테이블 중앙 마영오! */
+    margin: 0 auto;
+    /* 테두리 */
+    border: 2px solid green;
+    /* 테이블 기본 간격 없앰 */
+    border-collapse: collapse;
+    /* 기본값은 seperate */
+}
+
+/* tr이나 td에 child 선택자 사용가능! 왜? table tr td 정해짐! 같은 종류만 옴 */
+
+/* 첫번째 td- 숫자부분 */
+.pnews td:first-child{
+    /* 가로크기 w */
+    width: 50px;
+    /* 세로크기 h */
+    height: 84px;
+    /* 텍스트 중앙 */
+    text-align: center;
+    /* 배경색 bgc */
+    background-color: rgba(143, 188, 143, 0.548);
+}
+
+/* 두번째 td */
+.pnews td:nth-child(2){
+    /* 배경색 bgc */
+    background-color: rgba(143, 188, 143, 0.103);
+    padding: 0 20px;
+}
+
+/* 세번째 td */
+.pnews td:last-child{
+    background-color: rgba(143, 188, 143, 0.103);
+    /* 오른쪽 패딩 */
+    padding-right: 7px;
+}
+
+/* 사진 뉴스 이미지 */
+.pnews img{
+    height: 70px;
+    /* 높이만 주면 가로크기는 자동! */
+    /* 인라인 요소가 세로정렬 */
+    vertical-align: middle;
+}
+
+/* 기사 타이틀 처리 박스 */
+.pnews td div{
+    /* 말 줄임 처리하기(2줄처리) */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /* 줄 간격 변경 */
+    line-height: 1.7;
+}
+
+/* 앞에 tr이 있는 tr에만 td에 디자인 */
+.pnews tr+tr td{
+    /* 사이 구분선 보더탑 bdt */
+    border-top: 1px solid green;
+}
+
+#cont{
+    background-color: white;
+}

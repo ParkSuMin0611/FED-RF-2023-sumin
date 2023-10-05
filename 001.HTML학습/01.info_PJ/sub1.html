@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- viewport: 모바일에서 실제 픽셀로 변환함.(크기 변화) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>네이버 정치 뉴스</title>
+        <!-- 서브용 외부 CSS 호출하기 -->
+        <link rel="stylesheet" href="./css/sub.css">
+        
+    </head>
+    <body>
+        <!-- 1. 상단 영역: 제목, 메뉴 -->
+        <header id="top" class="bx">
+            <!-- 1-1. 제목 -->
+            <h1>네이버 정치 뉴스</h1>
+            <!-- 1-2. GNB(Global Navigation Bar) 메뉴 -->
+            <nav id="gnb">
+                <a href="index.html">
+                    <!-- 상대경로 -->
+                    <img src="./images/logo.png" alt="네이버 로고" style="width: 28px" />
+                    <!-- style속성으로 CSS를 셋팅하는 방법을 인라인 방식이라고 함. -->
+                    <!-- 절대상대경로 -->
+                    <!-- <img src="/001.HTML학습/01.info_PJ/images/logo.png" alt="네이버 로고" /> -->
+                    <!-- 절대경로 -->
+                    <!-- <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음 로고" /> -->
+                </a>
+                <a href="sub1.html">정치</a>  | 
+                <a href="sub2.html">경제</a>  | 
+                <a href="sub3.html">사회</a>  | 
+                <a href="sub4.html">IT/과학</a>  | 
+                <a href="sub5.html">TV/연예</a>
+            </nav>
+        </header>
+        <!-- 2. 메인 영역: 컨텐츠 -->
+        <main id="cont" class="bx">
+            <!-- 2-1. 서브타이틀 -->
+            <h2 class="stit st1">정치 뉴스</h2>
+            <!-- 2-2. 언론사로고 -->
+            <div class="prlogo">
+                <img src="./images/prlogo1.png" alt="국민일보">
+            </div>
+            <!-- 2-3. 기사 제목 -->
+            <h2 class="atit">아기 기저귀 없다며 생리대 준 교도소…“母수용자 인권 침해”</h2>
+            <!-- 2-4. 기사사진 -->
+            <figure class="afigimg">
+                <!-- 이미지 -->
+                <img src="./images/afig1.jpg" alt="수갑이 걸린 철장을 쥔 여성의 손 ">
+                <figcaption>
+                    <!-- 이미지 설명 -->
+                    수갑이 걸린 철장을 쥔 여성의 손
+                </figcaption>
+            </figure>
+            <!-- 2-5. 기사 내용 -->
+            <section class="acont">
+                <p>교정시설에서 신생아를 양육하는 여성 수용자에게 충분한 기저귀를 제공하지 않은 것은 인권침해에 해당한다고 국가인권위원회가 판단했다.</p>
+
+                <p>28일 인권위에 따르면 수도권의 한 구치소에 수용돼 아이를 키우는 A씨는 신생아의 기저귀를 충분히 받지 못했고 생리대를 대신 받거나 자비로 사는 경우도 있었다면서 지난해 5월 진정을 냈다.</p>
+
+                <p>형의 집행 및 수용자의 처우에 관한 법률에 따르면 여성 수용자는 자신이 출산한 유아를 교정시설에서 키우겠다고 신청할 수 있는데, 생후 18개월까지만 허가된다.</p>
+
+                <p>해당 구치소 측은 이 수용자가 기저귀를 요청하면 필요한 만큼 지급했다고 해명했다. 또 ‘생리대를 줬다’는 주장에는 “A씨가 사전에 기저귀를 신청하지 않았고, 출정 당일에 갑자기 수량이 부족하다고 해 잔여분이 있던 일자형 기저귀로 대체했다”고 답변했다.</p>
+
+                <p>인권위는 구치소가 A씨에게 한 주에 기저귀를 최소 35개만 지급한 점을 지적했다.</p>
+
+                <p>인권위는 “질병관리청 국가건강정보 포털에서는 기저귀를 신생아의 경우 하루 최소한 10회, 돌 무렵이 되면 7∼8회 갈아줘야 한다고 권고한다”며 “진정 당시 7∼8개월 유아였던 A씨의 자녀에게 주당 최소한 70개의 기저귀를 제공했어야 필요 최소한의 위생 상태를 유지할 수 있을 것으로 보인다”고 판단했다.</p>
+
+                <p>그러면서 구치소가 육아용품을 충분히 제공하지 않아 A씨와 그 자녀의 인간으로서의 존엄과 가치와 행복추구권을 침해했다고 판단했다.</p>
+                    <p>인권위는 형집행법 등에 여성 수용자의 유아 양육과 관련한 기본적인 처우 원칙이 명시됐지만 세부기준과 고려사항이 하위 법령에 구체적으로 규정되진 않다는 점도 문제로 지적했다.</p>
+
+                <p>이에 법무부 장관에게 여성 수용자의 교정 시설 내 육아에 관한 처우를 관련 법령에 구체화하고 기저귀 등 필수적인 육아용품 지급기준을 현실화하라고 권고했다.</p>
+            </section>
+            <!-- 2-6. 기자 정보 -->
+            <div class="rpt">김성훈 기자(hunhun@kmib.co.kr)</div>
+            <!-- 2-7. 기사 원문 -->
+            <h5 class="realnews">
+                <a href="https://n.news.naver.com/mnews/article/005/0001626958?sid=100" target="_blank">기사원문</a>
+            </h5>
+        </main>
+        <!-- 3. 하단 영역: 회사정보 -->
+        <footer id="info" class="bx">
+            <address>
+                서울시 강남구 역삼동 119 대호B 8F <br />
+                대표: <span class="utxt">박수민</span> <br />
+                전화: <b class="utxt">010-1234-5678</b>
+            </address>
+        </footer>
+    </body>
+</html>

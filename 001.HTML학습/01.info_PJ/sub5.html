@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- viewport: 모바일에서 실제 픽셀로 변환함.(크기 변화) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>네이버 TV/연예 뉴스</title>
+        <!-- 서브용 외부 CSS 호출하기 -->
+        <link rel="stylesheet" href="./css/sub.css">
+    </head>
+    <body>
+        <!-- 1. 상단 영역: 제목, 메뉴 -->
+        <header id="top" class="bx">
+            <!-- 1-1. 제목 -->
+            <h1>네이버 TV/연예 뉴스</h1>
+            <!-- 1-2. GNB(Global Navigation Bar) 메뉴 -->
+            <nav id="gnb">
+                <a href="index.html">
+                    <!-- 상대경로 -->
+                    <img src="./images/logo.png" alt="네이버 로고" style="width: 28px" />
+                    <!-- style속성으로 CSS를 셋팅하는 방법을 인라인 방식이라고 함. -->
+                    <!-- 절대상대경로 -->
+                    <!-- <img src="/001.HTML학습/01.info_PJ/images/logo.png" alt="네이버 로고" /> -->
+                    <!-- 절대경로 -->
+                    <!-- <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음 로고" /> -->
+                </a>
+                <a href="sub1.html">정치</a>  | 
+                <a href="sub2.html">경제</a>  | 
+                <a href="sub3.html">사회</a>  | 
+                <a href="sub4.html">IT/과학</a>  | 
+                <a href="sub5.html">TV/연예</a>
+            </nav>
+        </header>
+        <!-- 2. 메인 영역: 컨텐츠 -->
+        <main id="cont" class="bx">
+            <!-- 2-1. 서브타이틀 -->
+            <h2 class="stit st5">TV/연예 뉴스</h2>
+            <!-- 2-2. 언론사로고 -->
+            <div class="prlogo">
+                <img src="./images/prlogo5.png" alt="SBS연예뉴스">
+            </div>
+            <!-- 2-3. 기사 제목 -->
+            <h2 class="atit">"저쪽 신사분이 보내셨습니다"...정국, 팬들에게 도시락 '역조공'</h2>
+            <!-- 2-4. 기사사진 -->
+            <figure class="afigimg">
+                <!-- 이미지 -->
+                <img src="./images/afig5.png" alt="방탄소년단 정국이 팬들에게 도시락 선물을 했다.">
+                <figcaption>
+                    <!-- 이미지 설명 -->
+                    방탄소년단 정국이 팬들에게 도시락 선물을 했다.
+                </figcaption>
+            </figure>
+            <!-- 2-5. 기사 내용 -->
+            <section class="acont">
+                <p>지난 30일 진행된 SBS '인기가요' 사전 녹화 당시 정국은 방청온 팬들을 위해 특제 도시락 차를 준비했다. 도시락 차에는 "저쪽 신사 분이 보내신 도시락 차입니다.", "아미(팬클럽 이름)야, 응원 좋더라"라는 정국의 다정다감한 멘트가 적혀 있다.</p>
+
+                <p>팬들에 따르면 도시락에는 크루아상 샌드위치를 비롯해 마카롱, 크로플, 초콜릿, 과일 등 간식 등이 담겼다.</p>
+                
+                <p>지난 31일 방송된 '인기가요'에서 정국은 솔로곡 '세븐'(Seven)으로 함께 후보에 오른 NCT 드림 'ISTJ', 뉴진스 '슈퍼 샤이'(Super Shy)를 제치고 1위를 차지했다.</p>
+                
+                <p>정국은 "내가 받을 줄 몰랐다. 너무 감사드린다. '세븐'으로 좋은 스타트를 했으니 앞으로도 좋은 음악 들려드리는 멋진 가수가 되겠다"고 소감을 밝혔다.</p>
+                
+                <p>정국은 팬들의 떼창에 힘입어 앵콜 무대도 라이브로 가득 채웠다.</p>
+            </section>
+            <!-- 2-6. 기자 정보 -->
+            <div class="rpt">강경윤 기자(kykang@sbs.co.kr)</div>
+            <!-- 2-7. 기사 원문 -->
+            <h5 class="realnews">
+                <a href="https://entertain.naver.com/read?oid=416&aid=0000297683&cid=1073787"target="_blank">기사원문</a>
+            </h5>
+        </main>
+        <!-- 3. 하단 영역: 회사정보 -->
+        <footer id="info" class="bx">
+            <address>
+                서울시 강남구 역삼동 119 대호B 8F <br />
+                대표: <span class="utxt">박수민</span> <br />
+                전화: <b class="utxt">010-1234-5678</b>
+            </address>
+        </footer>
+    </body>
+</html>

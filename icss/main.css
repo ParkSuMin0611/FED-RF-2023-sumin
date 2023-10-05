@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* 아카이브 메인 CSS - main.css */
+
+/* 웹폰트 CDN(Content Delevery Network) */
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+Han+Sans&family=Dongle&family=Sunflower:wght@300&display=swap");
+/*
+웹폰트 font-family 이름
+font-family: 'Bagel Fat One', cursive;
+font-family: 'Black Han Sans', sans-serif;
+font-family: 'Dongle', sans-serif;
+font-family: 'Sunflower', sans-serif;
+*/
+
+/* 초기화 */
+html,body,h1,h2,h3,ul,ol{
+    margin: 0;
+    padding: 0;
+}
+
+/* 전체 배경이미지 */
+body{
+    background: url(../imgs/pink.png) no-repeat fixed center/cover;
+    font-family: 'Sunflower', sans-serif;
+}
+
+/* 전체박스 */
+.wrap{
+    background-color: rgba(204, 160, 221, 0.514);
+    width: 80%;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* 메인타이틀 */
+.tit{
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+    color: darkorchid;
+}

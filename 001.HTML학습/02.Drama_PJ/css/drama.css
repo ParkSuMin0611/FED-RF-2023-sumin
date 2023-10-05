@@ -1,0 +1,155 @@
+@charset "utf-8";
+/* 한국최신드라마 리스트 CSS - drama.css */
+
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+/* 
+    font-family: 'Hahmlet', serif;
+*/
+
+/* 초기화 */
+html,body{
+    margin: 0;
+    padding: 0;
+}
+/* 
+    [ 테이블 요소 기본특성 ]
+    1. 다른 요소가 옆에 못 오는 블록요소적 성질이 있음
+    2. 가로크기는 내용만큼만 늘어남
+    3. 자신을 싸고 있는 박스가 내용보다 작아지면 가로스크롤이 생기지 않도록 내용을 랩핑하여 줄바꿈처리 한다.
+    (단, 이미지와 같이 크기가 고정된 요소가 내용에 있으면 가로스크롤 생김!
+*/
+
+/* 테이블 공통 클래스 */
+.tb1{
+    /* 글씨체 */
+    font-family: 'Hahmlet', serif;
+    /* 글자색 */
+    color: #222;
+    /* 기본테이블 간극 없애기 */
+    border-collapse: collapse;
+    /* 기본값 seperate */
+}
+
+/* 드라마 테이블 */
+#drama{
+    font-size: 24px;
+    margin: 0 auto;
+    /* 테이블은 가로 크기 설정이 없으면 내용만큼 늘어남. max-width로 가로스크롤 대비! */
+    width: 1000px;
+    max-width: 95%;
+    /* 최대크기 95%란 싸고 있는 박스의 95%를 유지함 */
+
+    /* max-width: 100px; */
+    /* 
+        테이블은 가로크기설정이 없으면 내용만큼 늘어남.
+        max-width를 특정 px로 줄 때 table은 적용 안 됨!
+    */
+}
+
+/* 테이블 제목-기본 중앙정렬 되어 있음! */
+#drama caption{
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding: 50px 0 20px;
+    /* 패딩: 위 양쪽 아래 */
+}
+
+/* td와 th 패딩 */
+#drama td, #drama th{
+    padding: 8px 10px;
+}
+
+/* td에 밑줄 넣기 */
+#drama tbody td{
+    border-bottom: 1px solid gainsboro;
+}
+/* tbody의 tr의 첫번째 td 중앙정렬 */
+#drama tbody tr td:first-child{
+    text-align: center;
+}
+
+/* th에 윗줄, 아랫줄 두꺼운 보더넣기+배경색 */
+#drama th{
+    border-top: 2px solid #555;
+    border-bottom: 2px solid #555;
+    background-color: pink;
+}
+
+/* tbody의 마지막 tr의 td 아랫줄 두꺼운 보더넣기 */
+#drama tbody tr:last-child td{
+    border-bottom: 2px solid #555;
+}
+
+/* 짝수번째 tbody tr의 td에 배경색 넣기 */
+#drama tbody tr:nth-child(even) td{
+    background-color: rgba(255, 182, 193, 0.24);
+}
+
+/* 하단영역(tfoot) */
+#drama tfoot td{
+    text-align: center;
+    padding: 45px 0;
+}
+
+/* 링크 a 공통 변경 */
+#drama a{
+    color: #222;
+    text-decoration: none;
+}
+
+/* 드라마명 a 오버시 */
+#drama a:hover{
+    color: hotpink;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+#drama tfoot a:hover{
+    color: red;
+    text-decoration: overline;
+    text-decoration-style: double;
+}
+
+/* 구분 테이블 박스 */
+.gubun{
+    width: 1000px;
+    /* 가로 크기 1000px */
+    max-width: 95%;
+    /* 최대크기 95%란 싸고 있는 박스의 95%를 유지함 */
+    margin: 0 auto;
+    margin-bottom: 200px;
+    /* outline: 2px dashed lightpink; */
+    overflow: hidden;
+}
+
+/* 구분테이블 */
+/* 요소명#아이디명 - 종속선택자 */
+table#gubun{
+    font-size: 20px;
+    border: 1px solid lightpink;
+    /* 테이블을 오른쪽 끝으로 보내기 */
+    float: right;
+    /* td에 사이간격주기 */
+    border-collapse: separate;
+    border-spacing: 10px; 
+    /* 
+        td 셀 사이간격
+         border-spacing: 가로 세로;
+         border-spacing: 양방향;
+    */
+}
+
+/* 구분테이블 td */
+#gubun td{
+    padding: 10px;
+}
+/* 구분테이블 첫번째 tr의 첫번째 td의 오른쪽 점선 넣기 */
+#gubun tr:first-child td:first-child{
+    border-right: 1px dotted rgba(247, 166, 179, 0.308);
+}
+
+/* 구분테이블의 두번째 tr부터 끝까지 td 윗쪽점선보더 넣기 */
+#gubun tr+tr td{
+    border-top: 4px dotted rgba(247, 166, 179, 0.308);
+}
